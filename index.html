@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css">
+	<style>
+		.section-1 {
+			width: 25%;
+			background: lightgreen;
+			margin: 20px auto;
+		}
+
+		.img-1,
+		.img-2 {
+			margin: 0 0 10px;
+			overflow: hidden;
+		}
+
+		.img-1 {
+			width: 139px;
+			height: 79px;
+			background: lightblue;
+		}
+
+		.img-2 {
+			width: 79px;
+			height: 139px;
+			background: lightpink;
+		}
+	</style>
+</head>
+<body>
+	<div class="section-1">
+		<figure class="img-1"><img src="img/pic1.jpg" alt=""></figure>
+		<!-- <figure class="img-1"><img src="img/pic2.jpg" alt=""></figure> -->
+		<figure class="img-1"><img src="https://brightcove01-secure.brightcove.com/6/104403126001/201409/2264/104403126001_3786082725001_Forsyth-County-Courthouse-shooting-surveillance-video-RAW-th.jpg?pubId=104403126001" alt=""></figure>
+		<figure class="img-2"><img src="img/pic3.jpg" alt=""></figure>
+		<figure class="img-2"><img src="img/pic4.jpg" alt=""></figure>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.imageResize.js"></script>
+	<script>
+		$(function(){
+			$('.img-1 img').imageResizer({
+				method: 'fill',
+				ratioWidth: 139,
+				ratioHeight: 79
+			});
+
+			$('.img-2 img').imageResizer({
+				method: 'fill',
+				ratioWidth: 79,
+				ratioHeight: 139
+			});
+		});	
+	</script>
+</body>
+</html>
